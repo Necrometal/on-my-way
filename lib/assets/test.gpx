@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="AllTrails https://www.alltrails.com/ - UTCS 23" version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <metadata>
+    <name>UTCS 23</name>
+    <link href="https://www.gpsies.com/">
+      <text>UTCS 23 on AllTrails</text>
+    </link>
+    <time>2023-01-29T15:38:44Z</time>
+  </metadata>
+  <rte>
+    <name>UTCS 23 on AllTrails</name>
+    <rtept lat="-18.882330" lon="47.522844">
+      <ele>1348.0000</ele>
+      <time>2023-01-29T15:38:44Z</time>
+    </rtept>
+    <rtept lat="-18.882330" lon="47.522608">
+      <ele>1349.0000</ele>
+      <time>2023-01-29T15:38:44Z</time>
+    </rtept>
+    <rtept lat="-18.882291" lon="47.523042">
+      <ele>1348.0000</ele>
+      <time>2023-01-29T15:38:44Z</time>
+    </rtept>
+  </rte>
+</gpx>
+
