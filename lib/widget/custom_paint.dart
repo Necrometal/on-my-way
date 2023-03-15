@@ -30,35 +30,62 @@ class WorldMapPainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
+    // set scale factor
     double scaleFactor = size.width / (180 * 2);
 
+    // paints to use for line
     paints = Paint()
       ..color = const Color.fromARGB(255, 11, 166, 187)
       ..strokeWidth = lineWidth;
 
+    // paint indicator
     final indicator = Paint()
       ..color = Colors.blue
       ..strokeWidth = lineWidth + 3;
 
+    /**
+     * set the indicator to the center of canvas
+     * need caclul for tranlating the canvas
+     * depending on current position
+     */
     canvas.translate(size.width / 2, size.height / 2);
+
+    // draw indicator
     canvas.drawCircle(
-      Offset(0, 0),
+      const Offset(0, 0),
       10,
       Paint()..color = Colors.blue,
     );
 
-    canvas.drawLine(Offset(0, 0), Offset(0, -20), indicator);
+    canvas.drawLine(
+      const Offset(0, 0), 
+      const Offset(0, -20), 
+      indicator
+    );
+
+    /**
+     * save the canvas to make sur that
+     * on translating the canvas the position 
+     * of the indicator remains in the center
+     */
     canvas.save();
 
+    /**
+     * set the canvas to 0,0
+     * to make sure that the canvas behave normaly
+     */
     canvas.translate(0, 0);
+
+    // rotate canvas depending of result of magnetometer
     canvas.rotate(angle * pi / 180);
     // draw the route here from registered route
 
-
+    // trace route
     if(coordinate != null){
       traceRoute(canvas, coordinate!.gpxRtept, paints, scaleFactor);
     }
 
+    // restore the canvas from save
     canvas.restore();
   }
 
